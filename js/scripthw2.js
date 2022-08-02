@@ -119,19 +119,27 @@ console.log(arr14);
 // ['x', 0, 0, 0, 0, 0, 0, 0, 0, 'x']
 // ['x', 'x', 'x', 'x', 'x', 'x','x']
 
-let a1 =[]; a1.length=10; a1.fill('x');
-let a2 =[]; a2.length=10; a2.fill(0); a2.splice(0,1,'x'); a2.splice(a2.length-1,1,'x');
-let a3 =[]; a3.length=10; a3.fill(0); a3.splice(0,1,'x'); a3.splice(a3.length-1,1,'x');
-let a4 =[]; a4.length=10; a4.fill(0); a4.splice(0,1,'x'); a4.splice(a4.length-1,1,'x');
-let a5 =[]; a5.length=10; a5.fill(0); a5.splice(0,1,'x'); a5.splice(a5.length-1,1,'x');
-let a6 =[]; a6.length=10; a6.fill(0); a6.splice(0,1,'x'); a6.splice(a6.length-1,1,'x');
-let a7 =[]; a7.length=10; a7.fill(0); a7.splice(0,1,'x'); a7.splice(a7.length-1,1,'x');
-let a8 =[]; a8.length=10; a8.fill(0); a8.splice(0,1,'x'); a8.splice(a8.length-1,1,'x');
-let a9 =[]; a9.length=10; a9.fill(0); a9.splice(0,1,'x'); a9.splice(a9.length-1,1,'x');
-let a10 =[]; a10.length=10; a10.fill('x');
-let mtx1 =[a1,a2,a3,a4,a5,a6,a7,a8,a9,a10]
+w = 11
+h = 11
 
-console.log(mtx1);
+let mtrx1 = [];
+
+for(let i = 0; i<w; i++){
+  mtrx1[i]=[];
+  for (let j = 0; j<h ; j++)
+    mtrx1[i][j] = 0;
+}
+
+for(let i = 0; i<w; i++){
+  for (let j = 0; j<h ; j++){
+    mtrx1[0][j] = "x";
+    mtrx1[i][0] = "x";
+    mtrx1[mtrx1.length-1][j]="x";
+    mtrx1[i][h]="x";
+  }
+}
+
+console.log(mtrx1)
 
 // 15*) нарисовать матрицу (таблица умножения)
 // 0: (10) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -145,30 +153,26 @@ console.log(mtx1);
 // 8: (10) [9, 18, 27, 36, 45, 54, 63, 72, 81, 90]
 // 9: (10) [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
-let b1 =[]; b1.length=11;for(let i=1; i<11; i++) {let n1=1;b1[i]=(i*n1);}b1.splice(0,1);
-let b2 =[]; b2.length=11;for(let i=1; i<11; i++) {b2[i]=(i*2);}b2.splice(0,1);
-let b3 =[]; b3.length=11;for(let i=1; i<11; i++) {b3[i]=(i*3);}b3.splice(0,1);
-let b4 =[]; b4.length=11;for(let i=1; i<11; i++) {b4[i]=(i*4);}b4.splice(0,1);
-let b5 =[]; b5.length=11;for(let i=1; i<11; i++) {b5[i]=(i*5);}b5.splice(0,1);
-let b6 =[]; b6.length=11;for(let i=1; i<11; i++) {b6[i]=(i*6);}b6.splice(0,1);
-let b7 =[]; b7.length=11;for(let i=1; i<11; i++) {b7[i]=(i*7);}b7.splice(0,1);
-let b8 =[]; b8.length=11;for(let i=1; i<11; i++) {b8[i]=(i*8);}b8.splice(0,1);
-let b9 =[]; b9.length=11;for(let i=1; i<11; i++) {b9[i]=(i*9);}b9.splice(0,1);
-let b10 =[]; b10.length=11;for(let i=1; i<11; i++) {b10[i]=(i*10);}b10.splice(0,1);
-
-let mtx2 =[b1,b2,b3,b4,b5,b6,b7,b8,b9,b10]
-
+let mtx2 = [];
+for(let i = 0; i<10; i++){
+  mtx2[i]=[];
+  for (let j = 0; j<10 ; j++) {
+    mtx2[i][j] = (i+1)*(j+1);
+  }
+}
 console.log(mtx2);
 
 // 16*)	Написать программу которая будет склонять слово
 // 	“товар” в зависимости от количества товаров в корзине.
 //     Например 1 - товар, 4 - товара, 6 - товаров.
 
-alert("Задача №16")
-let tovarNumber = (+prompt("Введите количесто товаров"));
+let tovarNumber = (+prompt("Задача №16 Введите количесто товаров"));
 let tovar = tovarNumber.toString().split('')
-    let lastnumber= +tovar.pop();
-if(lastnumber===0){
+let lastnumber =  +tovar[tovar.length-1];
+
+if((+((tovar[tovar.length-2]) + (tovar[tovar.length-1])))>=11 && (+((tovar[tovar.length-2]) + (tovar[tovar.length-1])))<=19){
+  console.log("У вас " + tovarNumber + " товаров");
+}else if(lastnumber===0){
     console.log("У вас " + tovarNumber + " товаров");
 }else if(lastnumber===1){
     console.log("У вас " + tovarNumber +" товар");
