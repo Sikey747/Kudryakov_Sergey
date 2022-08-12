@@ -1,0 +1,250 @@
+/* space-grotesk-regular - latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+  url('../fonts/space-grotesk-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/space-grotesk-v12-latin-regular.woff') format('woff'); /* Modern Browsers */
+}
+/* space-grotesk-500 - latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+  url('../fonts/space-grotesk-v12-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/space-grotesk-v12-latin-500.woff') format('woff'); /* Modern Browsers */
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Grotesk',sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  background: black;
+}
+
+.conteiner{
+  width: 1400px;
+  /*min-height: 1772px;*/
+  margin: 0 auto;
+  background: #000000;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.box-figures{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.figures:hover{
+  transform: scale(125%);
+}
+
+.figures{
+  width: 25px;
+  height: 25px;
+  background: #FFFFFF;
+  box-shadow: 12px 32px 80px -20px rgba(0, 0, 0, 0.12);
+  border-radius: 32px;
+  transition: all 0.2s ease-in-out;
+}
+
+.figure1{
+  margin-top: 68px;
+  margin-left: 74px;
+  width: 137px;
+  height: 137px;
+}
+
+.figure2{
+  margin-left: 243px;
+  margin-top: 47px;
+  width: 42px;
+  height: 42px;
+}
+
+.figure3{
+  width: 90px;
+  height: 90px;
+  margin-left: 234px;
+  margin-top: 23px;
+}
+
+.figure4{
+  width: 83px;
+  height: 83px;
+  margin-left: 314px;
+  margin-top: 68px;
+  margin-right: 168px;
+}
+
+.figure5{
+  width: 25px;
+  height: 25px;
+  margin-left: 91px;
+  margin-top: 248px;
+}
+
+.figure6{
+  width: 51px;
+  height: 51px;
+  margin-left: 122px;
+  margin-top: 132px;
+}
+
+.figure7{
+  width: 90px;
+  height: 90px;
+  margin-left: 75px;
+  margin-top: 279px;
+}
+
+.figure8{
+  width: 90px;
+  height: 90px;
+  margin-left: 61px;
+  margin-top: 279px;
+}
+
+.figure9{
+  width: 42px;
+  height: 42px;
+  margin-left: 149px;
+  margin-top: 89px;
+}
+
+.figure10{
+  width: 63px;
+  height: 63px;
+  margin-left: 41px;
+  margin-top: 248px;
+}
+
+.btn{
+  min-width: 264px;
+  min-height: 73px;
+  margin-left: 116px;
+  margin-top: 96px;
+  background: #FFFFFF;
+  box-shadow: 12px 32px 80px -20px rgba(0, 0, 0, 0.12);
+  border-radius: 32px;
+  font-weight: 500;
+  font-size: 17px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.04em;
+  cursor: pointer;
+}
+
+.red{
+  color: #750505;
+}
+
+
+
+/*////////////////////down*/
+
+.box-card{
+  width: 1285px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 90px;
+  margin-left: 53px;
+  margin-right: 62px;
+}
+
+.bigbox:not(:nth-child(6n)){
+  margin-right: 43px;
+}
+
+.bigbox{
+  margin-bottom: 32px;
+
+}
+
+.imgbox:hover + .buttenBox{
+  margin-top: -175px;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttenBox:hover{
+  margin-top: -175px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hight-text{
+  position: absolute;
+  top: 0;
+  width: 75px;
+  padding-top: 16.09px;
+  padding-left: 16.79px;
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);
+  letter-spacing: -0.04em;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 22px;
+}
+
+.botton-text{
+  position: absolute;
+  width: 140px;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 16.09px;
+  padding-left: 16.79px;
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);
+  letter-spacing: -0.04em;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 22px;
+}
+
+.imgbox{
+  position: relative;
+  width: 178px;
+  height: 251px;
+  color: white;
+  background: linear-gradient(#3E3E3E, #3E3E3E) padding-box,
+  linear-gradient(271deg, #e4e4e4, #6f6f6f) border-box;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nftImg{
+  display: block;
+  width: 164.57px;
+  height :194.69px;
+  background-color: black;
+  margin: 0 auto;
+  margin-top: 6.44px;
+  margin-bottom: 49.88px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  object-fit: cover;
+}
+
+.buttenBox{
+  width: 178px;
+  height: 200px;
+  margin-top: -200px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  border-radius: 12px;
+}
+
+.buttenTresh{
+  margin-bottom: -4px;
+  background-color: initial;
+  cursor: pointer;
+  border: #FFFFFF;
+}
